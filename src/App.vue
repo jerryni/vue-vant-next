@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  app-text: {{ text }}
+  <h2>v-model: {{ text }}</h2>
   <HelloWorld
     msg="Welcome to Your Vue.js + TypeScript App"
     v-model="text"
@@ -8,17 +8,20 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
+import { defineComponent } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
 
-@Options({
+export default defineComponent({
   components: {
-    HelloWorld,
+    'HelloWorld': HelloWorld,
   },
+
+  data() {
+    return {
+      text: 'app text'
+    }
+  }
 })
-export default class App extends Vue {
-  text = 'app text';
-}
 </script>
 
 <style>

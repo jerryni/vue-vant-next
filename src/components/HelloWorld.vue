@@ -2,9 +2,12 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p @click="changeModel">from app message: {{ modelValue }}</p>
-    <p>clicked title count: {{ state.count }}</p>
-    <a href="https://vuejs.org">link style</a>
-    <van-button plain hairline type="primary" @click="increment">细边框按钮</van-button>
+    <p>
+      vant-button:
+      <van-button plain hairline type="primary" @click="increment">click to increment: {{ state.count }}</van-button>
+    </p>
+
+    <a href="https://youzan.github.io/vant/next/#/zh-CN/home">vant next</a>
   </div>
 </template>
 
