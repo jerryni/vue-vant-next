@@ -1,18 +1,9 @@
-// import { Options, Vue } from 'vue-class-component';
+// TODO: tsx needs extra css-loader for the style;
 import { defineComponent, ref ,reactive } from 'vue';
 
-// @Options({
-//   props: {
-//     msg: String,
-//     modelValue: Number
-//   }
-// })
 export default defineComponent({
-  // msg!: string;
-
   data() {
     return {
-      // msg: '',
       count: 0,
     }
   },
@@ -39,28 +30,4 @@ export default defineComponent({
       )
     }
   },
-
-  // handleH1Click() {
-  //   console.log('handleH1Click')
-  //   this.$emit('update:modelValue', '234');
-  // }
 })
-// </script>
-
-// <!-- Add "scoped" attribute to limit CSS to this component only -->
-// <style scoped>
-// h3 {
-//   margin: 40px 0 0;
-// }
-// ul {
-//   list-style-type: none;
-//   padding: 0;
-// }
-// li {
-//   display: inline-block;
-//   margin: 0 10px;
-// }
-// a {
-//   color: #42b983;
-// }
-// </style>
