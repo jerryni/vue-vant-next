@@ -1,10 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p @click="changeModel">from app message: {{ modelValue }}</p>
+    <van-button type="normal" @click="changeModel">change mValue</van-button>
     <p>
-      vant-button:
-      <van-button plain hairline type="primary" @click="increment">click to increment: {{ state.count }}</van-button>
+      <van-button plain hairline type="primary" @click="increment">increment: {{ state.count }}</van-button>
     </p>
 
     <a href="https://youzan.github.io/vant/next/#/zh-CN/home">vant next</a>
@@ -47,7 +46,7 @@ export default defineComponent({
     const { state, increment } = useState(0);
 
     function changeModel() {
-      ctx.emit('update:modelValue', 'updated text')
+      ctx.emit('update:modelValue', 'updated')
     }
 
     return {
@@ -74,5 +73,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.hello {
+  border: 1px #eee solid;
 }
 </style>

@@ -1,14 +1,14 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <h2>v-model: {{ text }}</h2>
+  <h2>app v-model value: {{ mValue }}</h2>
   <HelloWorld
     msg="Welcome to Your Vue.js + TypeScript App"
-    v-model="text"
+    v-model="mValue"
   />
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
 
 export default defineComponent({
@@ -16,9 +16,11 @@ export default defineComponent({
     'HelloWorld': HelloWorld,
   },
 
-  data() {
+  setup() {
+    const mValue = ref('app mValue');
+
     return {
-      text: 'app text'
+      mValue
     }
   }
 })
